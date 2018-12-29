@@ -1,0 +1,33 @@
+﻿^contentpage {
+    background-color: #e5f5fe;
+}
+
+stacklayout {
+    margin: 10, 20, 10, 20;     
+}
+
+#ResultList {
+    background-color: transparent;
+}
+
+listview image {
+    height: 60;
+    width: 60;
+}
+
+.outerStack {
+    margin: 10, 20, 10, 20;
+    background-color:white;
+}
+
+.PersonName {
+    font-weight: bold;
+    font-size: large;
+}
+.PersonGarageAddress {
+    color: #26aafe;
+    font-size: medium;
+}
+.PersonGarageName {
+    font-size: medium;
+}

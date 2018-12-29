@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMotorCare.ResultPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="/result_style.css"/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="Item 1"
+                Priority="0" Order="Primary" />
+        <ToolbarItem Text ="Item 2"
+              Priority="1" Order="Primary" />
+        <ToolbarItem Text ="Item 2"
+              Priority="1" Order="Secondary"  />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical">
+                <ListView x:Name="ResultList"
+                          HasUnevenRows="False"
+                          SeparatorVisibility="None" StyleClass="outerStack" Margin="0,10,0,10">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="5">
+                                    <Grid StyleClass="outerStack">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.3*" />
+                                            <ColumnDefinition Width="0.7*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding DisplayImage}" Grid.Column="0" Aspect="AspectFill"/>
+                                        <StackLayout Orientation="Vertical" Grid.Column="1">
+                                            <Label Text="{Binding Name}" FontFamily="times new roman"  StyleClass="PersonName"/>
+                                            <Label Text="{Binding GarageAddress}" FontFamily="times new roman" StyleClass="PersonGarageAddress"/>
+                                            <Label Text="{Binding GarageName}" FontFamily="times new roman" StyleClass="PersonGarageName"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

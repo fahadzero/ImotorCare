@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IMotorCare.CustomControls"
+             x:Class="IMotorCare.MainPage">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/style.css"/>
+    </ContentPage.Resources>
+    
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="Center">
+        <Label Text="WELCOME" 
+               HorizontalOptions="CenterAndExpand"
+               TextColor="White"
+               FontFamily="times new roman"
+               FontSize="Large"/>
+
+        <Label Text="Let's help you find the exact help you need"
+               HorizontalOptions="CenterAndExpand"
+               FontFamily="times new roman"
+               TextColor="White"
+               FontSize="Small"
+               StyleClass="title"/>
+
+
+        <Button VerticalOptions="Center"
+                x:Name="FindMechanic"
+                Text="FIND MECHANIC"
+                Margin="20,2"
+                BackgroundColor="White"
+                WidthRequest="40" HeightRequest="40" 
+                BorderRadius="20"
+                TextColor="#014c76"
+                Clicked="FindMechanic_Clicked"/>
+        
+        <Button VerticalOptions="Center" 
+                Text="FIND BREAKDOWN"
+                x:Name="FindBreakdown"
+                Margin="20,2"
+                WidthRequest="40" 
+                HeightRequest="40"
+                BorderRadius="20"
+                BackgroundColor="White"
+                TextColor="#014c76"
+                Clicked="FindBreakdown_Clicked" />
+    </StackLayout>
+
+</ContentPage>
